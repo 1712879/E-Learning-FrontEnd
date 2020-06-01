@@ -1,0 +1,36 @@
+.profile--container{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile--options{
+    height: auto;
+    border: 1px solid slategrey;
+}
+
+.profile--detail{
+    width: 70%;
+    height: 200px;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    border: 1px solid slateblue;
+}
+
+.profile--control, .profile--avt{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile--control{
+    padding: 10px 30px;
+}
+
+.profile--avt{
+    align-items: center;
+    
+}
+
+.avt{
+    width: 200px;
+    height: 200px;
+}

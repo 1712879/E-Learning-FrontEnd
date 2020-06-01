@@ -1,0 +1,83 @@
+.slides{
+    /* margin-top: 100px; */
+}
+.body-container{
+    margin-top: 30px;
+}
+
+.carousel-item img{
+    height: 500px;
+    margin: auto;
+}
+/* 
+.box .text{
+    padding: 50px;
+    transition: all .4s;
+    border-radius: 50%;
+}
+
+.text:hover{
+    background-color:#f1c40f;
+    color: #2c3e50;
+    border: sandybrown;
+} */
+/* * Cateories */
+.categories{
+    display: flex;
+}
+
+.items{
+    margin-right: 3px;
+    box-shadow: 0.1px 1px 2px slategrey;
+    height: 60px;
+    cursor: pointer;
+}
+
+.items p{
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.items:hover p{
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+/* *********************************/
+
+.title-product, .topic-title{
+    font-size: 15px;
+    white-space: normal;
+    font-weight: 700;
+    color: #29303b;
+}
+
+.topic-title{
+    font-size: 25px;
+}
+
+.btn{
+    color: black;
+    margin-right: 10px;
+    white-space: normal;
+    font-weight: 400;
+}
+
+/* *HEART*/
+.btn img{
+    width: 40px;
+    height: 40px;
+    transition: all .3s;
+}
+
+.btn:hover .btn-cart{
+    transform: scale(1.5);
+}
+
+.btn:hover .btn-heart{
+    transform: scale(1.5);
+}
+
+.btn-see-detail{
+    
+}

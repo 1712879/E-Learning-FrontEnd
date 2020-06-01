@@ -1,0 +1,14 @@
+.footer{
+    display: flex;
+    padding: 15px;
+}
+
+.column:not(.final){
+    border-right: 2px solid white;
+}
+
+.bottom-footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
