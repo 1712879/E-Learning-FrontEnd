@@ -1,8 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-
+import { GoogleLogin } from 'react-google-login';
 const Modal = React.forwardRef((props) => {
-    
+    const responseGoogle = (response) => {
+        let {email, googleId} = response.profileObj;
+        console.log(email)
+        props.setAuth();
+    }
+
     return (
         <>
             <div class="modal fade" id={props.type} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,6 +40,13 @@ const Modal = React.forwardRef((props) => {
                                         <label class="col-form-label">Password:</label>
                                         <input ref={props.passwordRef__SignUp} type="password" class="form-control" id="password" name="password"/>
                                     </div>
+                                    <GoogleLogin
+                                        clientId="38247720221-gp1ed27vo351svv6nbpiqbvj52bick1o.apps.googleusercontent.com"
+                                        buttonText="Login with Google"
+                                        onSuccess={responseGoogle}
+                                        onFailure={responseGoogle}
+                                        cookiePolicy={'single_host_origin'}
+                                    />
                                     </>
                                     ) : 
                                     (
@@ -47,6 +59,22 @@ const Modal = React.forwardRef((props) => {
                                         <label class="col-form-label">Password:</label>
                                         <input ref={props.passwordRef__Login} type="password" class="form-control" id="password" name="password"/>
                                     </div>
+                                    <GoogleLogin
+                                        clientId="38247720221-gp1ed27vo351svv6nbpiqbvj52bick1o.apps.googleusercontent.com"
+                                        buttonText="Login with Google"
+                                        render={renderProps => (
+                                            <div className="btn-logingoogle">
+                                                <img style={{width: '50px', height: '50px'}} src="https://image.flaticon.com/teams/slug/google.jpg"/>
+                                                <a onClick={renderProps.onClick} disabled={renderProps.disabled} data-dismiss="modal">Login with Google</a>
+                                            </div>
+                                            
+                                            
+                                          )}
+                                        onSuccess={responseGoogle}
+                                        onFailure={responseGoogle}
+                                        
+                                        cookiePolicy={'single_host_origin'}
+                                    />
                                     </>
                                     )
                                     

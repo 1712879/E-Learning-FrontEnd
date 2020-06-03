@@ -7,8 +7,24 @@
     padding: 0px 30px; */
 }
 
+.course-info{
+    height: 100%;
+    background-color: #34495e;
+    padding: 20px 10px;
+}
 .course--title{
-    height: 500px;
+    display: flex;
+    align-items: center;
+
+    height: 400px;
+    
+    color: white;
+}
+
+.course-img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .course--body{
@@ -17,10 +33,36 @@
     flex-direction: row;
 }
 
-.course--content{
-
-}
-
 .course--info{
-
+    border-left: 1px solid black;
+    height: 500px;
 }
+
+.course--content{
+    padding: 10px 0px;
+}
+
+.course--content h3{
+    padding: 10px 20px;
+}
+
+.course--whatulearn{
+    padding: 20px;
+}
+
+.star-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+}
+.avt-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.video-trailer{
+    width: 500px;
+    height: 400px;
+}
+
+

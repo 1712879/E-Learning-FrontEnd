@@ -69,22 +69,22 @@ const Header = React.forwardRef((props) => {
                         <div class="collapse multi-collapse collapse-cart" id="multiCollapse--heart">
                             <div class="card card-body box" style={{ "color": "black" }}>
                                 {
-                                    props.listLove.length == 0 ? 
-                                    <div>
-                                        <p>Empty...</p>
-                                    </div> : 
-                                    props.listLove.map(m => {
-                                        return (
-                                            <div className="item-container">
-                                                <div className="item-image">
-                                                    <img src={m.image} />
+                                    props.listLove.length == 0 ?
+                                        <div>
+                                            <p>Empty...</p>
+                                        </div> :
+                                        props.listLove.map(m => {
+                                            return (
+                                                <div className="item-container">
+                                                    <div className="item-image">
+                                                        <img src={m.image} />
+                                                    </div>
+                                                    <div className="item-info">
+                                                        <p className="item-title">{m.name}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="item-info">
-                                                    <p className="item-title">{m.name}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })
+                                            )
+                                        })
                                 }
                             </div>
                         </div>
@@ -99,35 +99,48 @@ const Header = React.forwardRef((props) => {
                         <div class="collapse multi-collapse collapse-cart" id="multiCollapse--cart">
                             <div class="card card-body box" style={{ "color": "black" }}>
                                 {
-                                    props.cart.length == 0 ? 
-                                    <div>
-                                        <p>Empty...</p>
-                                    </div> : 
-                                    props.cart.map(m => {
-                                        return (
-                                            <div className="item-container">
-                                                <div className="item-image">
-                                                    <img src={m.image} />
+                                    props.cart.length == 0 ?
+                                        <div>
+                                            <p>Empty...</p>
+                                        </div> :
+                                        props.cart.map(m => {
+                                            return (
+                                                <div className="item-container">
+                                                    <div className="item-image">
+                                                        <img src={m.image} />
+                                                    </div>
+                                                    <div className="item-info">
+                                                        <p className="item-title">{m.name}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="item-info">
-                                                    <p className="item-title">{m.name}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })
+                                            )
+                                        })
                                 }
                             </div>
                         </div>
                     </li>
 
-                    <li class="nav-item login login-li">
-                        {/* <a class="nav-link" href="/login">Login</a> */}
-                        <a class="nav-link" data-toggle="modal" data-target="#login" >Login</a>
-                    </li>
-                    <li class="nav-item login signup-li">
-                        <a class="nav-link" data-toggle="modal" data-target="#signup" >SignUp</a>
-                        {/* <a class="nav-link" href="/signup">SignUp</a> */}
-                    </li>
+                    {
+                        !props.isAuth ? 
+                        (
+                        <>
+                        <li class="nav-item login login-li">
+                            <a class="nav-link" data-toggle="modal" data-target="#login" >Login</a>
+                        </li>
+                        <li class="nav-item login signup-li">
+                            <a class="nav-link" data-toggle="modal" data-target="#signup" >SignUp</a>
+                        </li>
+                        </>
+                        ) : (
+                            <li class="nav-item login login-li">
+                            <a class="nav-link" data-toggle="modal" data-target="#logout" >Logout</a>
+                        </li>
+                        )
+                    }
+
+                    
+
+
                 </ul>
             </div>
 
